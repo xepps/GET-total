@@ -1,0 +1,20 @@
+{
+    "items": [
+        { "id": 0, "slug": "socks", "price": 3, "quantity": 2 },
+        { "id": 1, "slug": "computer", "price": 300, "quantity": 4 },
+        { "id": 2, "slug": "table", "price": 2.5, "quantity": 1 },
+        { "id": 3, "slug": "pants", "price": 0.75, "quantity": 0 },
+        { "id": 4, "slug": "tree", "price": 200, "quantity": 100 },
+        { "id": 5, "slug": "rattle", "price": 1.5, "quantity": 15 },
+        { "id": 6, "slug": "book", "price": 6.05, "quantity": 20 },
+        { "id": 7, "slug": "television", "price": 2500, "quantity": 12 },
+        { "id": 8, "slug": "chair", "price": 60, "quantity": 4 },
+        { "id": 9, "slug": "phone", "price": 999, "quantity": 9 },
+        { "id": 10, "slug": "robot", "price": 27500, "quantity": 1 },
+        { "id": 11, "slug": "eyeball", "price": 100000, "quantity": 2 },
+        { "id": 12, "slug": "shoe", "price": 34.99, "quantity": 2 },
+        { "id": 13, "slug": "cat", "price": 650, "quantity": 7 },
+        { "id": 14, "slug": "teddy-bear", "price": 14.99, "quantity": 1 },
+        { "id": 15, "slug": "netacea", "price": 1000000, "quantity": 8 }
+    ]
+}

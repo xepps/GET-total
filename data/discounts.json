@@ -1,0 +1,8 @@
+{
+    "discounts": [
+        { "name": "10% off total", "slug": "TOTAL10" },
+        { "name": "Buy 1 sock, get 1 free", "slug": "BOGOFSOCK" },
+        { "name": "Got bots? Get Netacea for free", "slug": "NETACE" },
+        { "name": "20:20 Vision in 2020? 20% off eyes!", "slug": "2020"}
+    ]
+}
