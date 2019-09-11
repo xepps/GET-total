@@ -16,4 +16,9 @@ describe('Total App', () => {
     const response = await request(server).get('/_healthcheck')
     expect(response.statusCode).toBe(200)
   })
+
+  it('should give you the price for one item', async () => {
+    const response = await request(server).get('/total?i=socks:1')
+    expect(response.body).toBe(3)
+  })
 })

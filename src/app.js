@@ -10,6 +10,13 @@ router.get(
     ctx.body = {}
   })
 
+router.get(
+  '/total',
+  async ctx => {
+    ctx.body = 3
+  }
+)
+
 module.exports = app
   .use(router.routes())
   .use(router.allowedMethods())
