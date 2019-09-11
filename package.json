@@ -1,0 +1,27 @@
+{
+  "name": "get-total",
+  "version": "1.0.0",
+  "description": "An API to give the total cost for a set of items",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xepps/GET-total.git"
+  },
+  "author": "Kristian Epps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xepps/GET-total/issues"
+  },
+  "homepage": "https://github.com/xepps/GET-total#readme",
+  "dependencies": {
+    "koa": "2.7.0",
+    "koa-router": "7.4.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  }
+}
