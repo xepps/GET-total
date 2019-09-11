@@ -1,6 +1,8 @@
 const Koa = require('koa')
 const Router = require('koa-router')
 
+const priceComputer = require('./priceComputer')
+
 const app = new Koa()
 const router = new Router()
 
@@ -13,7 +15,12 @@ router.get(
 router.get(
   '/total',
   async ctx => {
-    ctx.body = 3
+    const query = ctx.request.query
+    const items = query.i.split(',').map(item => {
+      const [slug, quantity] = item.split(':')
+      return { slug, quantity }
+    })
+    ctx.body = priceComputer(items)
   }
 )
 

@@ -17,8 +17,13 @@ describe('Total App', () => {
     expect(response.statusCode).toBe(200)
   })
 
-  it('should give you the price for one item', async () => {
-    const response = await request(server).get('/total?i=socks:1')
-    expect(response.body).toBe(3)
+  ;[
+    { item: 'socks', result: 3 },
+    { item: 'computer', result: 300 }
+  ].forEach(({ item, result }) => {
+    it(`should give you the price for one ${item}`, async () => {
+      const response = await request(server).get(`/total?i=${item}:1`)
+      expect(response.body).toBe(result)
+    })
   })
 })
