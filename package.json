@@ -4,7 +4,9 @@
   "description": "An API to give the total cost for a set of items",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test:lint": "standard",
+    "test:unit": "jest",
+    "test": "npm run test:lint && npm run test:unit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,10 @@
   },
   "devDependencies": {
     "jest": "^24.9.0",
+    "standard": "^14.1.0",
     "supertest": "^4.0.2"
+  },
+  "standard": {
+    "env": { "jest" : true, "es6": true }
   }
 }
