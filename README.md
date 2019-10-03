@@ -2,10 +2,14 @@
 
 You have been tasked with making an API for a shopping cart.
 
-Your api should take a list of one or more items and provide a total price for those items
+Your api should take a list of one or more items by id or slug, reduce the total by any supplied discount code (only one code can be applied) and provide a total price for those items.
 
-Multiple of the same item can be bought.
+You should check that there are enough items availble to buy and return a suitable error.
 
-Item quantities need to be checked that there is a valid amount of items to sell.
+The design of the API is up to you, so long as it starts with /total
 
-One or more discount codes can be applied to alter the price.
+You can use any node libraries to complete this exercise (it's a good idea to start with something like express or koa)!
+
+We expect an adequate level of unit/integration testing for this application - for example, jest with supertest works well, but the choice is yours! 
+
+Your application should be able to be run locally, and have adequate instructions to allow us to run the server locally.
