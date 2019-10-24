@@ -4,23 +4,21 @@ const app = express()
 const inventory = require('../data/items.json')
 // const discounts = require('../data/discounts.json')
 
-// const calculateTotal = (products) => {
-//     JSON.parse(inventory)
-// }
+app.get('/total', ({ query }, res) => {
+    if (query) {
+        const outOfStock = inventory.items
+            .find(item => item.slug in query && item.quantity < query[item.slug])
 
-app.get('/total', (req, res) => {
-    console.log('QUERY', req.query)
-    if (req.query) {
-        if (req.query.socks > 2) {
+        if (outOfStock) {
             res.status(401)
             return res.send({
-                error: 'Not enough socks'
+                error: `Not enough ${outOfStock.slug}`
             })
         }
 
         const items = inventory.items
-            .filter(item => item.slug in req.query)
-            .map(item => item.price * req.query[item.slug])
+            .filter(item => item.slug in query)
+            .map(item => item.price * query[item.slug])
             .reduce((a, b) => a + b, 0)
 
         res.send({ total: items, success: true })
